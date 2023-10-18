@@ -1,4 +1,4 @@
-veglegesFizetesAr = 0
+veglegesFizetesAr: int = 0
 
 
 def rendelesModulMain():
@@ -9,9 +9,9 @@ def rendelesModulMain():
 
 def levesek():
     global veglegesFizetesAr
-    levesKerdes = input("Szeretne kerni levest? (I/N) ")
+    levesKerdes: str = input("Szeretne kerni levest? (I/N) ")
     if levesKerdes == "I" or levesKerdes == "i":
-        levesMegnevezes = input("Milyen levest szeretne? valasszon a fenti listabol: ")
+        levesMegnevezes: str = input("Milyen levest szeretne? valasszon a fenti listabol: ")
         if levesMegnevezes == "gazpacho":
             veglegesFizetesAr += 3000
             print("gazpacho hozzaadva")
@@ -26,7 +26,7 @@ def levesek():
             foEtel()
         else:
             print("Ilyen leves nincsen ami ettermunkben")
-            foEtel()
+            levesek()
     elif levesKerdes == "N" or levesKerdes == "n":
         foEtel()
     else:
@@ -35,9 +35,9 @@ def levesek():
 
 def foEtel():
     global veglegesFizetesAr
-    foEtelKerdes = input("Szeretne kerni foetelt? (I/N) ")
+    foEtelKerdes: str = input("Szeretne kerni foetelt? (I/N) ")
     if foEtelKerdes == "I" or foEtelKerdes == "i":
-        foEtelMegnevezes = input("Milyen foetelt szeretne? valassszon a fenti listabol: ")
+        foEtelMegnevezes: str = input("Milyen foetelt szeretne? valassszon a fenti listabol: ")
         if foEtelMegnevezes == "sertesbelszin":
             veglegesFizetesAr += 3500
             print("sertesbelszin hozzaadva")
@@ -52,7 +52,7 @@ def foEtel():
             desszert()
         else:
             print("Mas etelunk nincsen sajnos, amire te gondolsz")
-            desszert()
+            foEtel()
     elif foEtelKerdes == "N" or foEtelKerdes == "n":
         desszert()
     else:
@@ -61,9 +61,9 @@ def foEtel():
 
 def desszert():
     global veglegesFizetesAr
-    desszertKerdes = input("Szeretne kerni desszertet? (I/N) ")
+    desszertKerdes: str = input("Szeretne kerni desszertet? (I/N) ")
     if desszertKerdes == "I" or desszertKerdes == "i":
-        desszertMegnevezes = input("Milyen desszertet szeretne? valasszon a fenti listabol: ")
+        desszertMegnevezes: str = input("Milyen desszertet szeretne? valasszon a fenti listabol: ")
         if desszertMegnevezes == "csokoladetorta":
             veglegesFizetesAr += 3000
             print("csokoldaetorta hozzadva")
@@ -78,7 +78,7 @@ def desszert():
             vegOsszeg()
         else:
             print("Mas desszertunk nincsen sajnos amire te gondolsz")
-            vegOsszeg()
+            desszert()
 
     elif desszertKerdes == "n" or desszertKerdes == "N":
         vegOsszeg()

@@ -79,7 +79,6 @@ def desszert():
         else:
             print("Mas desszertunk nincsen sajnos amire te gondolsz")
             desszert()
-
     elif desszertKerdes == "n" or desszertKerdes == "N":
         vegOsszeg()
     else:

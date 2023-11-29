@@ -16,20 +16,20 @@ def kiiras():
     print("")
     index = 0
     while index < len(eloetelLista):
-        print(f"\t{index+1} {eloetelLista[index]} {eloetelListaAr[index]}  ft")
+        etlapDesing.etelekKiirasa(index+1,eloetelLista[index],eloetelListaAr[index])
         index+=1
     etlapDesing.szovegKiiras("_" * 6, "Foetel", "_" * 6)
     print("")
     index = 0
     while index < len(foetelLista):
-        print(f"\t{index+1} {foetelLista[index]} {foetelListaAr[index]} ft")
+        etlapDesing.etelekKiirasa(index+1,foetelLista[index],foetelListaAr[index])
         index+=1
 
     etlapDesing.szovegKiiras("_" * 6, "Desszertek", "_" * 6)
     print("")
     index = 0
     while index < len(desszertLista):
-        print(f"\t{index+1} {desszertLista[index]} {desszertListaAr[index]} ft")
+        etlapDesing.etelekKiirasa(index+1, foetelLista[index], foetelListaAr[index])
         index+=1
     etlapDesing.jel("_", 30)
     print("")

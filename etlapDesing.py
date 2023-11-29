@@ -11,4 +11,4 @@ def szovegKiiras(jel, szoveg, jel2):
 
 
 def etelekKiirasa(tetel, tetelAr, tetelForint):
-    print(f"{tetel:<18} {tetelAr:>4} {tetelForint:>6}")
+    print(f"{tetel:<5} {tetelAr:>6} {tetelForint:>7}")

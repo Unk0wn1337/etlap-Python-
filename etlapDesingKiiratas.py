@@ -29,7 +29,7 @@ def kiiras():
     print("")
     index = 0
     while index < len(desszertLista):
-        etlapDesing.etelekKiirasa(index+1, foetelLista[index], foetelListaAr[index])
+        etlapDesing.etelekKiirasa(index+1, desszertLista[index], desszertListaAr[index])
         index+=1
     etlapDesing.jel("_", 30)
     print("")

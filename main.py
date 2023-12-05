@@ -1,5 +1,5 @@
 import etlapDesingKiiratas
-import rendelesKiiratasListaknak
+import rendelesModul
 etlapDesingKiiratas.kiiras()
 print("")
-rendelesKiiratasListaknak.kiiratasMegListak()
+rendelesModul.rendelesModulMain()

@@ -1,29 +1,41 @@
-
-
-def rendelesModulMain():
-    print("Udvozoljuk az etteremben")
-    rendelesFelvetel()
-
-
-def rendelesFelvetel(lista):
+def rendelesFelvetel():
     rendeltLista = []
     veglegesFizetesAr: int = 0
-    index = 0
-    while index < len(lista):
-        bekeresKaja = int(input("Kérem a kajának a sorszámát"))
-        if bekeresKaja == 1:
-            rendeltLista.append(str(lista[index-1]))
+    kajaBekeres = int(input("Étel sorszáma: "))
+    while not kajaBekeres == 0:
+        if kajaBekeres == 1:
+            rendeltLista.append("gazpacho")
             veglegesFizetesAr += 3000
-        if bekeresKaja == 2:
-            rendeltLista.append(str(lista[index-1]))
+        elif kajaBekeres == 2:
+            rendeltLista.append("husleves")
             veglegesFizetesAr += 2500
-        if bekeresKaja == 3:
-            rendeltLista.append(str(lista[index-1]))
+        elif kajaBekeres == 3:
+            rendeltLista.append("kremleves")
             veglegesFizetesAr += 4000
-        index+=1
-    print(f"Végleges ár {veglegesFizetesAr}")
+        elif kajaBekeres == 4:
+            rendeltLista.append("sertesbelszin")
+            veglegesFizetesAr += 3500
+        elif kajaBekeres == 5:
+            rendeltLista.append("lazacfile")
+            veglegesFizetesAr += 6000
+        elif kajaBekeres == 6:
+            rendeltLista.append("gombas rizotto")
+            veglegesFizetesAr += 4800
+        elif kajaBekeres == 7:
+            rendeltLista.append("csokoladetorta")
+            veglegesFizetesAr += 3000
+        elif kajaBekeres == 8:
+            rendeltLista.append("citrusos panna")
+            veglegesFizetesAr += 4700
+        elif kajaBekeres == 9:
+            rendeltLista.append("csokigolyo")
+            veglegesFizetesAr += 7500
+        kajaBekeres = int(input("Étel sorszáma: "))
+    return veglegesFizetesAr
 
-
-
+def rendelesModulMain():
+    print("Üdvözöljük éttermünkben")
+    vegAr = rendelesFelvetel()
+    print(f"Végösszeg: {vegAr} ft")
 
 
